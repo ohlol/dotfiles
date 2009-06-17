@@ -9,6 +9,6 @@ set ts=4
 
 nmap <F1> <Esc>
 
-# Puppet syntax hiliting
+" Puppet syntax hiliting
 au BufRead,BufNewFile *.pp set filetype=puppet
 au! Syntax puppet source ~/.vim/syntax/puppet.vim
