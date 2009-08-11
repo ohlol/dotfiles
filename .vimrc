@@ -11,10 +11,13 @@ set shiftwidth=2
 set expandtab
 set laststatus=2
 set list listchars=tab:»·,trail:·
-" I regularly paste whole lines, this screws that up =(
-"set number
+set number
+set nohls
+set backup
+set backupdir=~/.vim/backup
+set directory=~/.vim/tmp
 
-colorscheme ir_black
+colorscheme desert256
 
 nmap <F1> <Esc>
 
@@ -39,3 +42,5 @@ if has("autocmd")
 else
   set autoindent
 end
+
+nmap <F6> :NERDTreeToggle<CR>
