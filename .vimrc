@@ -17,7 +17,7 @@ set backup
 set backupdir=~/.vim/backup
 set directory=~/.vim/tmp
 
-colorscheme desert256
+colorscheme scoot
 
 nmap <F1> <Esc>
 
@@ -41,6 +41,10 @@ if has("autocmd")
   augroup END
 else
   set autoindent
+end
+
+if has("gui_running")
+  set lines=100 columns=113
 end
 
 nmap <F6> :NERDTreeToggle<CR>
