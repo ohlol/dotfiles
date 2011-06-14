@@ -7,7 +7,13 @@ fi
 
 # User specific environment and startup programs
 
-PATH=/opt/local/bin:$PATH:$HOME/bin
+[ -x /usr/bin/lsb_release ] && lsb_release -is | grep Ubuntu > /dev/null
+
+[ $? -eq 0 ] && PATH=/var/lib/gems/1.8/bin:$PATH
+
+[ ! -d ~/.histfiles ] && mkdir ~/.histfiles
+
+PATH=$PATH:$HOME/bin
 PS1='\u@\h:\w% '
 EDITOR=vim
 HISTSIZE=50000
